@@ -145,7 +145,7 @@ describe("Tests app", function() {
 
   it("check text string with upper and lower cased words", function(done) {
     commonPostRequest({"text": "A a"}, function(err, res) {
-      resultObjectCheck(res, 3, 2, 2, [{"A": 1}, {"a": 1}]);
+      resultObjectCheck(res, 3, 2, 2, [{"a": 2}]);
       res.should.have.status(200);
       done(err);
     });

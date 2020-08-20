@@ -53,7 +53,7 @@ function getSortedCharactersCountArray(charactersCountMap) {
 function getCharactersCountMap(text) {
   let charactersCountMap = {}
 
-  Array.from(text).forEach(character => {
+  Array.from(text.toLowerCase()).forEach(character => {
     if (character.match(/[A-Za-z]+/)) {
       if (!charactersCountMap[character]) {
         charactersCountMap[character] = 0;
